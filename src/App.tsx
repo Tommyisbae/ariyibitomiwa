@@ -5,35 +5,35 @@ const PROJECTS = [
   {
     id: 1,
     title: 'Intryc AI',
-    description: 'A strategic brand identity and high-performance Webflow redesign driving user engagement.',
+    description: 'End-to-end UI design and custom Webflow development, delivering a high-performance platform that drives engagement.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4.png',
     liveUrl: 'https://www.intryc.com/'
   },
   {
     id: 2,
     title: 'Mono AI',
-    description: 'A refined digital storefront for an AI layer, bringing clarity and precision to complex workflows.',
+    description: 'From concept to live site—seamless UI/UX design and Webflow engineering bringing clarity to complex AI workflows.',
     coverUrl: '/Y43TDcqsno5M4iq5IHuxI0pTu2Y.mp4.png',
     liveUrl: 'https://mono-ai-e3cdb7.webflow.io/'
   },
   {
     id: 3,
     title: 'Tandem',
-    description: 'A custom, pixel-perfect Webflow experience bridging ambitious brand vision with flawless execution.',
+    description: 'Pixel-perfect web design paired with flawless Webflow execution to bridge an ambitious brand vision.',
     coverUrl: '/K33SR12U1IWujvZkbVkYKGAzhI.mp4.png',
     liveUrl: 'https://www.thetandemco.com/'
   },
   {
     id: 4,
     title: 'Cameron Gawley',
-    description: 'A scalable digital portfolio transitioning a DTC consultant into a strategic institution.',
+    description: 'Comprehensive UX design and scalable Webflow development transitioning a DTC consultant into a strategic institution.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (2).png',
     liveUrl: 'https://www.camerongawley.com/'
   },
   {
     id: 5,
     title: 'Haven Oaks',
-    description: 'An accessible, user-centric care platform designed to convey deep trust, warmth, and professionalism.',
+    description: 'End-to-end product design and robust Webflow architecture for an accessible, trust-driven care platform.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (1).png',
     liveUrl: 'https://www.havenoakscareservices.com/'
   }
