@@ -60,7 +60,7 @@ export default function App() {
         <img 
           src="/certified_partner_badge_white.svg" 
           alt="Certified Webflow Partner Badge"
-          className="h-[28px] lg:h-[32px] w-auto drop-shadow-md group-hover:-translate-y-1 transition-transform duration-300"
+          className="h-[36px] md:h-[44px] w-auto group-hover:-translate-y-1 transition-transform duration-300 transform-gpu"
         />
       </a>
 
