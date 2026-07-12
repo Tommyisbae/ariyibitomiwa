@@ -49,7 +49,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Fixed Vertical Webflow Partner Badge */}
+      <a 
+        href="https://experts.webflow.com/profile/ariyibi-tomiwa" 
+        target="_blank" 
+        rel="noreferrer"
+        className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-50 group"
+      >
+        <img 
+          src="/certified_partner_badge_white.svg" 
+          alt="Certified Webflow Partner Badge"
+          className="h-[28px] lg:h-[32px] w-auto drop-shadow-md group-hover:-translate-y-1 transition-transform duration-300"
+        />
+      </a>
+
       <main className="max-w-[620px] mx-auto px-6 py-16 md:py-24">
         
         {/* Profile Header */}
@@ -67,12 +81,7 @@ export default function App() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Certified Webflow Partner</span>
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1.5 flex-shrink-0">
-              <path fillRule="evenodd" clipRule="evenodd" d="M13.3265 3.84956L11.0025 1.60156L8.6785 3.84956L5.4775 3.39656L4.9185 6.58056L2.0625 8.09656L3.4825 11.0016L2.0625 13.9056L4.9185 15.4216L5.4775 18.6056L8.6785 18.1536L11.0025 20.4016L13.3265 18.1536L16.5275 18.6056L17.0865 15.4216L19.9425 13.9056L18.5225 11.0016L19.9425 8.09656L17.0865 6.58056L16.5275 3.39656L13.3265 3.84956ZM6.2365 11.4246L9.6645 14.8526L15.3475 8.64656L14.0005 7.39956L9.6005 12.1946L7.5285 10.1226L6.2365 11.4246Z" fill="#146EF5"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M13.099 4.533L10.998 2.5L8.89706 4.533L6.00206 4.123L5.49706 7.003L2.91406 8.373L4.19806 11L2.91406 13.627L5.49706 14.997L6.00206 17.877L8.89706 17.467L10.998 19.5L13.099 17.467L15.994 17.877L16.499 14.997L19.082 13.627L17.798 11L19.082 8.373L16.499 7.003L15.994 4.123L13.099 4.533ZM6.23106 11.423L9.66006 14.851L15.343 8.645L13.996 7.398L9.59606 12.193L7.52406 10.121L6.23106 11.423Z" fill="#146EF5"/>
-              <path fillRule="evenodd" clipRule="evenodd" d="M6.22956 11.4234L9.65856 14.8514L15.3086 8.68144L15.3466 8.64844L15.3416 10.0464L9.65856 16.2524L6.22956 12.8234L6.22656 11.4184L6.23156 11.4214L6.22956 11.4234Z" fill="#146EF5"/>
-            </svg>
+            <span>Webflow Expert for Ambitious Brands</span>
           </div>
         </section>
 
