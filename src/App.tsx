@@ -50,7 +50,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white relative">
-      {/* Fixed Vertical Webflow Partner Badge */}
+      {/* Fixed Webflow Partner Badge */}
       <a 
         href="https://experts.webflow.com/profile/ariyibi-tomiwa" 
         target="_blank" 
@@ -58,9 +58,9 @@ export default function App() {
         className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-50 group"
       >
         <img 
-          src="/certified_partner_badge_white.svg" 
+          src="/certified_partner_badge_white.avif" 
           alt="Certified Webflow Partner Badge"
-          className="h-[36px] md:h-[44px] w-auto group-hover:-translate-y-1 transition-transform duration-300 transform-gpu"
+          className="h-[32px] md:h-[40px] w-auto drop-shadow-sm group-hover:-translate-y-1 transition-transform duration-300 transform-gpu"
         />
       </a>
 
