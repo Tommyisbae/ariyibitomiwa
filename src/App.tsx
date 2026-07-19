@@ -4,34 +4,41 @@ import { useState } from 'react';
 const PROJECTS = [
   {
     id: 1,
+    title: 'Climb',
+    description: 'End-to-end UI design and scalable design system for a Databricks-native AI consultancy, delivered on an aggressive timeline.',
+    coverUrl: '/climb-cover.png',
+    liveUrl: 'https://www.figma.com/design/i1j3INxeLTFz7ahk2TJHH2/Climb-Website---May-21?node-id=75-2&t=03oOrppFtBRcBFSH-1'
+  },
+  {
+    id: 2,
     title: 'Intryc AI',
     description: 'End-to-end UI design and custom Webflow development, delivering a high-performance platform that drives engagement.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4.png',
     liveUrl: 'https://www.intryc.com/'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Mono AI',
     description: 'From concept to live site—seamless UI/UX design and Webflow engineering bringing clarity to complex AI workflows.',
     coverUrl: '/Y43TDcqsno5M4iq5IHuxI0pTu2Y.mp4.png',
     liveUrl: 'https://mono-ai-e3cdb7.webflow.io/'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Tandem',
     description: 'Pixel-perfect web design paired with flawless Webflow execution to bridge an ambitious brand vision.',
     coverUrl: '/K33SR12U1IWujvZkbVkYKGAzhI.mp4.png',
     liveUrl: 'https://www.thetandemco.com/'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Cameron Gawley',
     description: 'Comprehensive UX design and scalable Webflow development transitioning a DTC consultant into a strategic institution.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (2).png',
     liveUrl: 'https://www.camerongawley.com/'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Haven Oaks',
     description: 'End-to-end product design and robust Webflow architecture for an accessible, trust-driven care platform.',
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (1).png',
