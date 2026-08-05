@@ -6,7 +6,7 @@ const PROJECTS = [
     id: 1,
     title: 'Voiceflow',
     description: 'End-to-end UI design and custom Webflow development for a B2B SaaS platform.',
-    coverUrl: '/voiceflow-cover.jpeg',
+    coverUrl: '/voiceflow-cover-v2.jpeg',
     liveUrl: 'https://www.voiceflow.com/'
   },
   {
