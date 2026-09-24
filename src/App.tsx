@@ -1,11 +1,11 @@
-import { ArrowUpRight, X, ArrowLeft } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
 import { useState } from 'react';
 
 const PROJECTS = [
   {
     id: 1,
     title: 'Voiceflow',
-    description: 'End-to-end UI design and custom Webflow development with bespoke interactions for a B2B SaaS platform.',
+    description: 'Web design and Webflow build for an AI agent platform.',
     tags: ['Webflow', 'UI Design', 'Interactions'],
     coverUrl: "/voiceflowcover.jpeg",
     liveUrl: 'https://www.voiceflow.com/'
@@ -13,15 +13,15 @@ const PROJECTS = [
   {
     id: 2,
     title: 'Climb',
-    description: 'End-to-end UI design and scalable Webflow build for a Databricks-native AI consultancy, delivered on an aggressive timeline.',
-    tags: ['Webflow', 'UI/UX Design', 'Design System'],
+    description: 'Website design and design system for a Databricks-native AI consultancy.',
+    tags: ['UI Design', 'Design System', 'Figma'],
     coverUrl: "/climb-cover.png",
     liveUrl: 'https://climb.ai/'
   },
   {
     id: 3,
     title: 'Intryc AI',
-    description: 'End-to-end UI design and high-performance Webflow execution, delivering a modern digital experience that drives engagement.',
+    description: 'Web design and Webflow build for an AI support-QA platform.',
     tags: ['Webflow', 'Web Design', 'Interactions'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4.png',
     liveUrl: 'https://www.intryc.com/'
@@ -29,15 +29,15 @@ const PROJECTS = [
   {
     id: 4,
     title: 'Mono AI',
-    description: 'From concept to live site—seamless UI/UX design and Webflow execution bringing clarity to complex AI workflows.',
-    tags: ['Webflow', 'UI/UX Design', 'Interactions'],
+    description: 'Concept site for an AI productivity platform, built in Webflow.',
+    tags: ['Webflow', 'Concept', 'Interactions'],
     coverUrl: '/Y43TDcqsno5M4iq5IHuxI0pTu2Y.mp4.png',
     liveUrl: 'https://mono-ai-e3cdb7.webflow.io/'
   },
   {
     id: 5,
     title: 'Tandem',
-    description: 'Pixel-perfect web design paired with flawless Webflow execution to bridge an ambitious brand vision.',
+    description: 'Web design and Webflow build for a multifamily real-estate firm.',
     tags: ['Webflow', 'Web Design', 'Interactions'],
     coverUrl: '/K33SR12U1IWujvZkbVkYKGAzhI.mp4.png',
     liveUrl: 'https://www.thetandemco.com/'
@@ -45,15 +45,15 @@ const PROJECTS = [
   {
     id: 6,
     title: 'Cameron Gawley',
-    description: 'Comprehensive UX design and scalable Webflow development transitioning a DTC consultant into a strategic institution.',
-    tags: ['Webflow', 'UI/UX Design', 'Figma'],
+    description: 'Personal site and CMS for an operator behind $500M+ in client revenue.',
+    tags: ['Webflow', 'UI/UX Design', 'CMS'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (2).png',
     liveUrl: 'https://www.camerongawley.com/'
   },
   {
     id: 7,
     title: 'Haven Oaks',
-    description: 'End-to-end product design and responsive Webflow architecture for an accessible, trust-driven care platform.',
+    description: 'Web design and Webflow build for a London home-care agency.',
     tags: ['Webflow', 'Web Design', 'Accessibility'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (1).png',
     liveUrl: 'https://www.havenoakscareservices.com/'
@@ -102,7 +102,7 @@ export default function App() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Webflow Expert & Designer</span>
+            <span>Webflow Designer & Developer</span>
           </div>
         </section>
 
@@ -161,58 +161,67 @@ export default function App() {
               <div className="space-y-4">
                 <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Summary</h3>
                 <p>
-                  For the last 3+ years, I've been obsessed with building high-performance websites and digital experiences that win you business. As a Webflow expert and designer, I craft bespoke visual experiences and scalable websites that look exceptional and drive measurable growth.
-                </p>
-                <p>
-                  I bridge the gap between thoughtful product design (Figma) and flawless Webflow execution. Building custom Webflow architectures with Client-First standards and polished animations, I turn slow, clunky websites into fast, strategic experiences that convert clicks into customers. I work fully remotely, partnering with ambitious brands worldwide.
+                  I design and build Webflow websites, from the first Figma file to launch. For 3+ years I've worked with brands across the US, UK and Nigeria, giving them sites that look sharp, load fast and are easy for their teams to run.
                 </p>
                 <div className="pt-2 flex items-center gap-4">
-                  <a href="https://www.linkedin.com/in/ariyibi-tomiwa-668219212" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-1.5 bg-[#F2F2F1] hover:bg-[#E5E5E4] transition-colors rounded-[8px] text-[14px] text-black font-medium">
+                  <a href="https://www.linkedin.com/in/ariyibi-tomiwa/" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-1.5 bg-[#F2F2F1] hover:bg-[#E5E5E4] transition-colors rounded-[8px] text-[14px] text-black font-medium">
                     <span className="text-white bg-[#0A66C2] px-1 py-0.5 rounded-[4px] text-[10px] font-bold leading-none flex items-center shrink-0">IN</span>
-                    LinkedIn CV
+                    View my LinkedIn
                   </a>
-                  <span className="text-gray-500 text-[14px] flex items-center gap-1.5 cursor-pointer hover:text-black transition-colors">
-                    <ArrowLeft className="w-4 h-4" /> Click to view
-                  </span>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Technical Skills & Stack</h3>
-                <div className="grid sm:grid-cols-2 gap-3 pt-1">
-                  <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
-                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">Webflow & CMS</span>
-                    <p className="text-[13px] text-gray-600 leading-normal">
-                      Webflow Certified Partner, Finsweet Client-First system, responsive styling, custom CMS architecture, component design.
-                    </p>
-                  </div>
-                  <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
-                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">UI/UX & Web Design</span>
-                    <p className="text-[13px] text-gray-600 leading-normal">
-                      Figma, visual design systems, wireframing, high-fidelity prototypes, brand identity, user-centric interfaces.
-                    </p>
-                  </div>
-                  <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
-                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">Interactions & Animation</span>
-                    <p className="text-[13px] text-gray-600 leading-normal">
-                      Webflow interactions, custom micro-interactions, smooth scroll experiences, fluid page transitions, GreenSock (GSAP).
-                    </p>
-                  </div>
-                  <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
-                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">Tools & Integrations</span>
-                    <p className="text-[13px] text-gray-600 leading-normal">
-                      Figma, Relume, Client-First, Wized, Memberstack, Webflow Apps, custom embeds.
-                    </p>
-                  </div>
+                <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Skills</h3>
+                <div className="space-y-2">
+                  {[
+                    { area: 'Webflow', items: 'Client-First, CMS, components' },
+                    { area: 'Design', items: 'Figma, design systems, prototypes' },
+                    { area: 'Motion', items: 'Webflow Interactions, GSAP' },
+                    { area: 'Integrations', items: 'Wized, Memberstack, Xano, Shopify' },
+                  ].map((skill) => (
+                    <div key={skill.area} className="flex items-baseline justify-between gap-3">
+                      <p className="text-[15px] text-gray-900">{skill.area}</p>
+                      <span className="text-[13px] text-gray-400 text-right">{skill.items}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Experience</h3>
-                <p>
-                  I recently worked with AssetIntel, a US-based infrastructure asset management firm, to build robust and scalable web experiences. Prior to that, as a Webflow Designer & Developer at Brandsmits and Murals.ng, I designed and developed high-performance Webflow sites across diverse industries. Throughout my workflow, I specialize in converting complex Figma designs into pixel-perfect Webflow architecture using Finsweet's Client-First system and engaging micro-interactions.
-                </p>
+                <div className="space-y-2">
+                  {[
+                    { role: 'Web Designer & Webflow Developer', org: 'Freelance', dates: '2026 – Now' },
+                    { role: 'Webflow Engineer', org: 'AssetIntel', dates: '2026' },
+                    { role: 'Web Designer', org: 'Brandsmits', dates: '2025' },
+                    { role: 'Design Engineer', org: 'Murals.ng', dates: '2023 – 2025' },
+                    { role: 'Webflow Intern', org: 'Tradespace', dates: '2023' },
+                  ].map((job) => (
+                    <div key={job.org} className="flex items-baseline justify-between gap-3">
+                      <p className="text-[15px] text-gray-900">{job.role} <span className="text-gray-500">· {job.org}</span></p>
+                      <span className="text-[13px] text-gray-400 shrink-0">{job.dates}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+
+              <div className="space-y-4">
+                <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Kind words</h3>
+                <div className="space-y-6">
+                  {[
+                    { quote: 'Clean, professional build, handled a complex CMS restructure well and took feedback on board.', name: 'Ed Perez, Max Performance' },
+                    { quote: 'Professional, ethical Webflow designer that can deliver. Fast and pragmatic.', name: 'Paulo C. Graça Moura, Quinta do Rapozinho' },
+                    { quote: 'His attention to detail and deep understanding of Webflow made the entire process seamless.', name: 'Octavian, design collaborator' },
+                  ].map((t) => (
+                    <div key={t.name}>
+                      <p className="text-[15px] text-gray-900">"{t.quote}"</p>
+                      <span className="text-[13px] text-gray-400">{t.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
 
             </section>
           )}
@@ -227,17 +236,17 @@ export default function App() {
                   </span>
                   ariyibitomiwa611@gmail.com
                 </a>
-                <a href="https://www.linkedin.com/in/ariyibi-tomiwa-668219212" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all">
+                <a href="https://www.linkedin.com/in/ariyibi-tomiwa/" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all">
                   <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                   </span>
-                  Linkedin.com/in/ariyibi-tomiwa
+                  linkedin.com/in/ariyibi-tomiwa
                 </a>
                 <a href="https://contra.com/ariyibi_tomiwa/work" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all">
                   <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                   </span>
-                  Contra.com/ariyibi_tomiwa
+                  contra.com/ariyibi_tomiwa
                 </a>
                 <a href="https://x.com/tommy_is_bae" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all">
                   <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
