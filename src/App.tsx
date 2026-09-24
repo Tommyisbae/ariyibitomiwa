@@ -5,32 +5,32 @@ const PROJECTS = [
   {
     id: 1,
     title: 'Voiceflow',
-    description: 'End-to-end UI design and custom Webflow development with bespoke JavaScript for a B2B SaaS platform.',
-    tags: ['Webflow', 'Custom JS', 'HTML/CSS'],
+    description: 'End-to-end UI design and custom Webflow development with bespoke interactions for a B2B SaaS platform.',
+    tags: ['Webflow', 'UI Design', 'Interactions'],
     coverUrl: "/voiceflowcover.jpeg",
     liveUrl: 'https://www.voiceflow.com/'
   },
   {
     id: 2,
     title: 'Climb',
-    description: 'End-to-end UI design and scalable frontend design system for a Databricks-native AI consultancy, delivered on an aggressive timeline.',
-    tags: ['Frontend', 'Design System', 'React'],
+    description: 'End-to-end UI design and scalable Webflow build for a Databricks-native AI consultancy, delivered on an aggressive timeline.',
+    tags: ['Webflow', 'UI/UX Design', 'Design System'],
     coverUrl: "/climb-cover.png",
     liveUrl: 'https://climb.ai/'
   },
   {
     id: 3,
     title: 'Intryc AI',
-    description: 'End-to-end UI design and custom frontend engineering, delivering a high-performance web experience that drives engagement.',
-    tags: ['Frontend', 'JavaScript (ES6+)', 'CSS3'],
+    description: 'End-to-end UI design and high-performance Webflow execution, delivering a modern digital experience that drives engagement.',
+    tags: ['Webflow', 'Web Design', 'Interactions'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4.png',
     liveUrl: 'https://www.intryc.com/'
   },
   {
     id: 4,
     title: 'Mono AI',
-    description: 'From concept to live site—seamless UI/UX design and frontend development bringing clarity to complex AI workflows.',
-    tags: ['Frontend', 'React', 'Interactions'],
+    description: 'From concept to live site—seamless UI/UX design and Webflow execution bringing clarity to complex AI workflows.',
+    tags: ['Webflow', 'UI/UX Design', 'Interactions'],
     coverUrl: '/Y43TDcqsno5M4iq5IHuxI0pTu2Y.mp4.png',
     liveUrl: 'https://mono-ai-e3cdb7.webflow.io/'
   },
@@ -38,7 +38,7 @@ const PROJECTS = [
     id: 5,
     title: 'Tandem',
     description: 'Pixel-perfect web design paired with flawless Webflow execution to bridge an ambitious brand vision.',
-    tags: ['Webflow', 'HTML/CSS', 'Interactions'],
+    tags: ['Webflow', 'Web Design', 'Interactions'],
     coverUrl: '/K33SR12U1IWujvZkbVkYKGAzhI.mp4.png',
     liveUrl: 'https://www.thetandemco.com/'
   },
@@ -46,15 +46,15 @@ const PROJECTS = [
     id: 6,
     title: 'Cameron Gawley',
     description: 'Comprehensive UX design and scalable Webflow development transitioning a DTC consultant into a strategic institution.',
-    tags: ['Webflow', 'JavaScript', 'Figma'],
+    tags: ['Webflow', 'UI/UX Design', 'Figma'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (2).png',
     liveUrl: 'https://www.camerongawley.com/'
   },
   {
     id: 7,
     title: 'Haven Oaks',
-    description: 'End-to-end product design and responsive frontend architecture for an accessible, trust-driven care platform.',
-    tags: ['Frontend', 'HTML/CSS', 'Accessibility'],
+    description: 'End-to-end product design and responsive Webflow architecture for an accessible, trust-driven care platform.',
+    tags: ['Webflow', 'Web Design', 'Accessibility'],
     coverUrl: '/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (1).png',
     liveUrl: 'https://www.havenoakscareservices.com/'
   }
@@ -102,7 +102,7 @@ export default function App() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Webflow Expert & Frontend Developer</span>
+            <span>Webflow Expert & Designer</span>
           </div>
         </section>
 
@@ -161,10 +161,10 @@ export default function App() {
               <div className="space-y-4">
                 <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Summary</h3>
                 <p>
-                  For the last 3+ years, I've been obsessed with building high-performance websites and digital experiences that win you business. As a Webflow expert and frontend developer, I bring designs to life with clean semantic HTML, modern CSS, JavaScript (ES6+), and React.
+                  For the last 3+ years, I've been obsessed with building high-performance websites and digital experiences that win you business. As a Webflow expert and designer, I craft bespoke visual experiences and scalable websites that look exceptional and drive measurable growth.
                 </p>
                 <p>
-                  I bridge the gap between creative visual design (Figma) and flawless technical execution. Whether building custom Webflow architectures with Client-First standards or engineering responsive frontend web applications with clean code, I turn slow, clunky websites into fast, strategic experiences that convert clicks into customers. I work fully remotely, partnering with ambitious brands worldwide.
+                  I bridge the gap between thoughtful product design (Figma) and flawless Webflow execution. Building custom Webflow architectures with Client-First standards and polished animations, I turn slow, clunky websites into fast, strategic experiences that convert clicks into customers. I work fully remotely, partnering with ambitious brands worldwide.
                 </p>
                 <div className="pt-2 flex items-center gap-4">
                   <a href="https://www.linkedin.com/in/ariyibi-tomiwa-668219212" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-3 py-1.5 bg-[#F2F2F1] hover:bg-[#E5E5E4] transition-colors rounded-[8px] text-[14px] text-black font-medium">
@@ -187,21 +187,21 @@ export default function App() {
                     </p>
                   </div>
                   <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
-                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">Frontend Engineering</span>
+                    <span className="text-[13px] font-semibold text-gray-900 block mb-1">UI/UX & Web Design</span>
                     <p className="text-[13px] text-gray-600 leading-normal">
-                      HTML5, Modern CSS / Tailwind CSS, JavaScript (ES6+), React. Clean semantic code, responsive layouts, web performance.
+                      Figma, visual design systems, wireframing, high-fidelity prototypes, brand identity, user-centric interfaces.
                     </p>
                   </div>
                   <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
                     <span className="text-[13px] font-semibold text-gray-900 block mb-1">Interactions & Animation</span>
                     <p className="text-[13px] text-gray-600 leading-normal">
-                      GreenSock (GSAP), Framer Motion, custom scroll interactions, fluid page transitions, micro-interactions.
+                      Webflow interactions, custom micro-interactions, smooth scroll experiences, fluid page transitions, GreenSock (GSAP).
                     </p>
                   </div>
                   <div className="bg-[#F8F8F7] border border-[#EAEAE8] p-4 rounded-[12px]">
                     <span className="text-[13px] font-semibold text-gray-900 block mb-1">Tools & Integrations</span>
                     <p className="text-[13px] text-gray-600 leading-normal">
-                      Figma, Wized, Xano, Memberstack, REST API integrations, Git/GitHub, Framer.
+                      Figma, Relume, Client-First, Wized, Memberstack, Webflow Apps, custom embeds.
                     </p>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function App() {
               <div className="space-y-4">
                 <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">Experience</h3>
                 <p>
-                  I recently worked with AssetIntel, a US-based infrastructure asset management firm, to engineer robust and scalable web solutions. Prior to that, as a Web Developer at Brandsmits and Murals.ng, I designed and developed high-performance Webflow sites and custom frontend integrations across diverse industries. Throughout my workflow, I specialize in converting complex Figma designs into pixel-perfect architecture using Finsweet's Client First system and custom frontend logic.
+                  I recently worked with AssetIntel, a US-based infrastructure asset management firm, to build robust and scalable web experiences. Prior to that, as a Webflow Designer & Developer at Brandsmits and Murals.ng, I designed and developed high-performance Webflow sites across diverse industries. Throughout my workflow, I specialize in converting complex Figma designs into pixel-perfect Webflow architecture using Finsweet's Client-First system and engaging micro-interactions.
                 </p>
               </div>
 
