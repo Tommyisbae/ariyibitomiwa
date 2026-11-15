@@ -75,12 +75,23 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
               key={src}
               className="-mx-6 sm:mx-0 overflow-hidden rounded-none sm:rounded-[24px] bg-gray-100"
             >
-              <img
-                src={src}
-                alt={`${study.title} screen ${i + 1}`}
-                loading="lazy"
-                className="w-full h-auto block"
-              />
+              {src.endsWith(".mp4") ? (
+                <video
+                  src={src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-auto block"
+                />
+              ) : (
+                <img
+                  src={src}
+                  alt={`${study.title} screen ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-auto block"
+                />
+              )}
             </div>
           ))}
         </div>

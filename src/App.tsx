@@ -27,6 +27,7 @@ const PROJECTS = [
   {
     id: 2,
     title: "Intryc AI",
+    caseStudy: "intryc",
     description: "Web design and Webflow build for an AI support-QA platform.",
     tags: ["Webflow", "Web Design", "Interactions"],
     coverUrl: "/intryc-cover.png",
@@ -44,6 +45,7 @@ const PROJECTS = [
   {
     id: 4,
     title: "TRACKSIDE",
+    caseStudy: "trackside",
     description:
       "Web design, motion and Webflow build for a motorsport hospitality brand.",
     tags: ["Webflow", "Web Design", "Motion"],
@@ -187,11 +189,6 @@ function Home() {
                       {project.title}
                     </h2>
                     <div className="flex items-center gap-1.5 flex-wrap">
-                      {"caseStudy" in project && (
-                        <span className="text-[11px] text-white bg-black px-2 py-0.5 rounded-[4px] font-medium">
-                          Case study
-                        </span>
-                      )}
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
