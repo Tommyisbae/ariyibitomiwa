@@ -3,6 +3,15 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
+    id: 8,
+    title: "Riverlight",
+    description:
+      "Brand system and website for a firm that builds and backs service businesses. In collab with Lunour.",
+    tags: ["Brand System", "Web Design", "Figma"],
+    coverUrl: "/riverlight-cover.webp",
+    liveUrl: "https://www.riverlight.co/",
+  },
+  {
     id: 0,
     title: "TRACKSIDE",
     description:
@@ -33,7 +42,7 @@ const PROJECTS = [
     title: "Intryc AI",
     description: "Web design and Webflow build for an AI support-QA platform.",
     tags: ["Webflow", "Web Design", "Interactions"],
-    coverUrl: "/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4.png",
+    coverUrl: "/intryc-cover.png",
     liveUrl: "https://www.intryc.com/",
   },
   {
@@ -42,7 +51,7 @@ const PROJECTS = [
     description:
       "Concept site for an AI productivity platform, built in Webflow.",
     tags: ["Webflow", "Concept", "Interactions"],
-    coverUrl: "/Y43TDcqsno5M4iq5IHuxI0pTu2Y.mp4.png",
+    coverUrl: "/mono-ai-cover.png",
     liveUrl: "https://mono-ai-e3cdb7.webflow.io/",
   },
   {
@@ -51,7 +60,7 @@ const PROJECTS = [
     description:
       "Web design and Webflow build for a multifamily real-estate firm.",
     tags: ["Webflow", "Web Design", "Interactions"],
-    coverUrl: "/K33SR12U1IWujvZkbVkYKGAzhI.mp4.png",
+    coverUrl: "/tandem-cover.png",
     liveUrl: "https://www.thetandemco.com/",
   },
   {
@@ -60,7 +69,7 @@ const PROJECTS = [
     description:
       "Personal site and CMS for an operator behind $500M+ in client revenue.",
     tags: ["Webflow", "UI/UX Design", "CMS"],
-    coverUrl: "/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (2).png",
+    coverUrl: "/cameron-gawley-cover.png",
     liveUrl: "https://www.camerongawley.com/",
   },
   {
@@ -68,7 +77,7 @@ const PROJECTS = [
     title: "Haven Oaks",
     description: "Web design and Webflow build for a London home-care agency.",
     tags: ["Webflow", "Web Design", "Accessibility"],
-    coverUrl: "/0lG7iLlrMlQuKB1qJ4CddTWzo.mp4 (1).png",
+    coverUrl: "/haven-oaks-cover.png",
     liveUrl: "https://www.havenoakscareservices.com/",
   },
 ];
@@ -106,7 +115,7 @@ export default function App() {
             onClick={() => setIsLightboxOpen(true)}
           >
             <img
-              src="/3DAqiz7qgEOCNbeL8NOmlMoUg.png (1).png"
+              src="/avatar.png"
               alt="Ariyibi Tomiwa"
               loading="lazy"
               className="w-full h-full object-cover"
@@ -187,10 +196,11 @@ export default function App() {
                   Summary
                 </h3>
                 <p>
-                  I design and build Webflow websites, from the first Figma file
-                  to launch. For 3+ years I've worked with brands across the US,
-                  UK and Nigeria, giving them sites that look sharp, load fast
-                  and are easy for their teams to run.
+                  I make websites that feel expensive. Clean, quiet and
+                  impossible to ignore. I partner with SaaS and B2B companies
+                  whose product has outpaced their brand, and close the gap,
+                  from identity to a Webflow or Framer build their team can
+                  actually run.
                 </p>
                 <div className="pt-2 flex items-center gap-4">
                   <a
@@ -214,9 +224,10 @@ export default function App() {
                 <div className="space-y-2">
                   {[
                     { area: "Webflow", items: "Client-First, CMS, components" },
+                    { area: "Framer", items: "Sites, CMS, interactions" },
                     {
                       area: "Design",
-                      items: "Figma, design systems, prototypes",
+                      items: "Figma, brand systems, design systems",
                     },
                     { area: "Motion", items: "Webflow Interactions, GSAP" },
                     {
@@ -497,7 +508,7 @@ export default function App() {
 
             <div className="w-full aspect-square rounded-full overflow-hidden">
               <img
-                src="/3DAqiz7qgEOCNbeL8NOmlMoUg.png (1).png"
+                src="/avatar.png"
                 alt="Ariyibi Tomiwa Enlarge"
                 loading="lazy"
                 className="w-full h-full object-cover object-top"

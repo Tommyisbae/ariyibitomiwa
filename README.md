@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Ariyibi Tomiwa — Portfolio
 
-# Run and deploy your AI Studio app
+Personal portfolio site for Ariyibi Tomiwa, Webflow Designer & Developer.
+Built with React, Vite and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/de7b5728-2e9b-4a35-b928-90f9eca97758
+Requires Node.js.
 
-## Run Locally
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
 
-**Prerequisites:**  Node.js
+## Build
 
+```bash
+npm run build    # outputs to dist/
+npm run preview
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Adding a project
+
+Add an entry to the `PROJECTS` array in `src/App.tsx` and put its cover image in `public/`.
+Also add it to the `<noscript>` and hidden SEO lists in `index.html`.
