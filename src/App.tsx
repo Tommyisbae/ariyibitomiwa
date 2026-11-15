@@ -1,10 +1,13 @@
 import { ArrowUpRight, X } from "lucide-react";
 import { useState } from "react";
+import CaseStudyPage from "./CaseStudyPage";
+import { getCaseStudy } from "./caseStudies";
 
 const PROJECTS = [
   {
     id: 0,
     title: "Riverlight",
+    caseStudy: "riverlight",
     description:
       "Brand system and website for a firm that builds and backs service businesses.",
     tags: ["Brand System", "Web Design", "Figma"],
@@ -14,6 +17,7 @@ const PROJECTS = [
   {
     id: 1,
     title: "Climb",
+    caseStudy: "climb",
     description:
       "Website design and design system for a Databricks-native AI consultancy.",
     tags: ["UI Design", "Design System", "Figma"],
@@ -83,6 +87,13 @@ const PROJECTS = [
 ];
 
 export default function App() {
+  const match = window.location.pathname.match(/^\/work\/([^/]+)\/?$/);
+  const study = match ? getCaseStudy(match[1]) : undefined;
+  if (study) return <CaseStudyPage study={study} />;
+  return <Home />;
+}
+
+function Home() {
   const [activeTab, setActiveTab] = useState("Work");
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -152,9 +163,14 @@ export default function App() {
             <section className="space-y-16">
               {PROJECTS.map((project) => (
                 <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={
+                    "caseStudy" in project
+                      ? `/work/${project.caseStudy}`
+                      : project.liveUrl
+                  }
+                  {...("caseStudy" in project
+                    ? {}
+                    : { target: "_blank", rel: "noreferrer" })}
                   key={project.id}
                   className="group cursor-pointer block"
                 >
@@ -171,6 +187,11 @@ export default function App() {
                       {project.title}
                     </h2>
                     <div className="flex items-center gap-1.5 flex-wrap">
+                      {"caseStudy" in project && (
+                        <span className="text-[11px] text-white bg-black px-2 py-0.5 rounded-[4px] font-medium">
+                          Case study
+                        </span>
+                      )}
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
