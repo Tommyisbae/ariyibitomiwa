@@ -3,33 +3,16 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
-    id: 8,
+    id: 0,
     title: "Riverlight",
     description:
-      "Brand system and website for a firm that builds and backs service businesses. In collab with Lunour.",
+      "Brand system and website for a firm that builds and backs service businesses.",
     tags: ["Brand System", "Web Design", "Figma"],
     coverUrl: "/riverlight-cover.webp",
     liveUrl: "https://www.riverlight.co/",
   },
   {
-    id: 0,
-    title: "TRACKSIDE",
-    description:
-      "Web design, motion and Webflow build for a motorsport hospitality brand.",
-    tags: ["Webflow", "Web Design", "Motion"],
-    coverUrl: "/trackside-cover.webp",
-    liveUrl: "https://trackside.vip/",
-  },
-  {
     id: 1,
-    title: "Voiceflow",
-    description: "Web design and Webflow build for an AI agent platform.",
-    tags: ["Webflow", "UI Design", "Interactions"],
-    coverUrl: "/voiceflowcover.jpeg",
-    liveUrl: "https://www.voiceflow.com/",
-  },
-  {
-    id: 2,
     title: "Climb",
     description:
       "Website design and design system for a Databricks-native AI consultancy.",
@@ -38,7 +21,7 @@ const PROJECTS = [
     liveUrl: "https://climb.ai/",
   },
   {
-    id: 3,
+    id: 2,
     title: "Intryc AI",
     description: "Web design and Webflow build for an AI support-QA platform.",
     tags: ["Webflow", "Web Design", "Interactions"],
@@ -46,16 +29,7 @@ const PROJECTS = [
     liveUrl: "https://www.intryc.com/",
   },
   {
-    id: 4,
-    title: "Mono AI",
-    description:
-      "Concept site for an AI productivity platform, built in Webflow.",
-    tags: ["Webflow", "Concept", "Interactions"],
-    coverUrl: "/mono-ai-cover.png",
-    liveUrl: "https://mono-ai-e3cdb7.webflow.io/",
-  },
-  {
-    id: 5,
+    id: 3,
     title: "Tandem",
     description:
       "Web design and Webflow build for a multifamily real-estate firm.",
@@ -64,7 +38,33 @@ const PROJECTS = [
     liveUrl: "https://www.thetandemco.com/",
   },
   {
+    id: 4,
+    title: "TRACKSIDE",
+    description:
+      "Web design, motion and Webflow build for a motorsport hospitality brand.",
+    tags: ["Webflow", "Web Design", "Motion"],
+    coverUrl: "/trackside-cover.webp",
+    liveUrl: "https://trackside.vip/",
+  },
+  {
+    id: 5,
+    title: "Voiceflow",
+    description: "Web design and Webflow build for an AI agent platform.",
+    tags: ["Webflow", "UI Design", "Interactions"],
+    coverUrl: "/voiceflowcover.jpeg",
+    liveUrl: "https://www.voiceflow.com/",
+  },
+  {
     id: 6,
+    title: "Mono AI",
+    description:
+      "Concept site for an AI productivity platform, built in Webflow.",
+    tags: ["Webflow", "Concept", "Interactions"],
+    coverUrl: "/mono-ai-cover.png",
+    liveUrl: "https://mono-ai-e3cdb7.webflow.io/",
+  },
+  {
+    id: 7,
     title: "Cameron Gawley",
     description:
       "Personal site and CMS for an operator behind $500M+ in client revenue.",
@@ -73,7 +73,7 @@ const PROJECTS = [
     liveUrl: "https://www.camerongawley.com/",
   },
   {
-    id: 7,
+    id: 8,
     title: "Haven Oaks",
     description: "Web design and Webflow build for a London home-care agency.",
     tags: ["Webflow", "Web Design", "Accessibility"],
