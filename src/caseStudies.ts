@@ -82,7 +82,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         ],
       },
     ],
-    gallery: ["/climb-cover.png"],
+    gallery: ["/projects/climb.jpg"],
   },
   {
     slug: "intryc",
@@ -162,6 +162,88 @@ export const CASE_STUDIES: CaseStudy[] = [
     gallery: [
       "https://media.contra.com/video/upload/fl_progressive/q_auto:best,w_1500/fuynmyiyeuhssslqct0m.mp4",
       CONTRA + "kq42ujoecjn42otfyeoi.webp",
+    ],
+  },
+  {
+    slug: "cameron-gawley",
+    title: "Cameron Gawley",
+    summary:
+      "A Webflow site and content hub for an operator who helps founders scale DTC brands.",
+    liveUrl: "https://www.camerongawley.com/",
+    meta: [
+      { label: "Role", value: "UI/UX design, brand strategy & Webflow build" },
+      { label: "Deliverables", value: "Website, design system, CMS, lead gen" },
+      { label: "Tools", value: "Figma, Webflow, Relume, JavaScript" },
+      { label: "Year", value: "2026" },
+    ],
+    hero: "/projects/cameron-gawley.jpg",
+    sections: [
+      {
+        heading: "Overview",
+        body: "Cameron has generated $500M+ in revenue for DTC brands, but his site made him look like a consultant. The goal was to make him look like an institution: a home base where founders find his systems, frameworks and case studies.",
+      },
+      {
+        heading: "The brief",
+        body: "Show real authority without feeling corporate. Organise three business lines, Systems, Advisory and Ventures, in a CMS that scales. Capture high-intent subscribers for his Operator Breakdown newsletter without interrupting the reading.",
+      },
+      {
+        heading: "What I did",
+        bullets: [
+          "Built a Figma design system first, with styles set up as variables and mapped to Webflow global classes.",
+          "Paired an editorial look (serif headings, cream backgrounds) with a tactical one (dark sections, monospace data), in forest green, cream, electric lime and charcoal.",
+          "Structured case studies as Problem, Decision and Outcome fields in the CMS, so Cameron can publish without touching the design.",
+          "Placed dark-mode components at key conversion points and styled the newsletter form like a members' club card.",
+          "Added a scroll- and time-triggered newsletter modal, a partner marquee and lime hover states, with WebP images and semantic HTML for speed and SEO.",
+          "Recorded a CMS training video library so the team can run the site in-house.",
+        ],
+      },
+      {
+        heading: "Result",
+        body: "A client-maintainable content hub that brings all three revenue streams into one lead-generation system, built with a Client-First structure the team can keep extending.",
+      },
+    ],
+    gallery: [
+      "https://media.contra.com/video/upload/fl_progressive/q_auto:best,w_1500/xcghak37bkbhgq5f8qud.mp4",
+      CONTRA + "aqtzye2sqawhtvbqvclu.webp",
+    ],
+  },
+  {
+    slug: "haven-oaks",
+    title: "Haven Oaks",
+    summary:
+      "Web design and Webflow build for a family-run home-care provider, delivered in one week.",
+    liveUrl: "https://www.havenoakscareservices.com/",
+    meta: [
+      { label: "Role", value: "Web design & Webflow build" },
+      { label: "Timeline", value: "1 week" },
+      { label: "Tools", value: "Figma, Webflow" },
+      { label: "Year", value: "2025" },
+    ],
+    hero: "/projects/haven-oaks.jpg",
+    sections: [
+      {
+        heading: "Overview",
+        body: "Haven Oaks provides person-centred care in people's homes, but their online presence was minimal and didn't show any of that warmth. Families arranging care are often under stress, so the site had to be easy to use and genuinely helpful, not just a brochure.",
+      },
+      {
+        heading: "The brief",
+        body: "Build trust at first glance, explain a wide range of services in plain language, make starting care feel simple, and show what existing clients say.",
+      },
+      {
+        heading: "What I did",
+        bullets: [
+          "Designed a calm, uncluttered layout with a clear hierarchy and a blue-and-white palette that feels reliable.",
+          "Chose photography of diverse people in comfortable home settings, so families can picture their own situation.",
+          "Laid out Nursing Care, Domiciliary Care, Live-In Support and Semi-Independent Living in one clear services section.",
+          "Turned starting care into three steps: book a visit, get a free home assessment, begin support.",
+          "Added a testimonials section with real client and family quotes to build credibility.",
+          "Built the site in Webflow, fully responsive and accessible.",
+        ],
+      },
+    ],
+    gallery: [
+      CONTRA + "qysdrqeb27kujegck4oy.webp",
+      CONTRA + "ch1emjqgi9qodhsrptuf.webp",
     ],
   },
 ];

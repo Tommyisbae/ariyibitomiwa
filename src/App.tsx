@@ -1,7 +1,23 @@
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, Check, Copy, X } from "lucide-react";
 import { useState } from "react";
 import CaseStudyPage from "./CaseStudyPage";
 import { getCaseStudy } from "./caseStudies";
+
+const EMAIL = "ariyibitomiwa611@gmail.com";
+const BOOKING_URL = "https://cal.com/ariyibi-tomiwa/15min";
+const SOCIALS = [
+  {
+    label: "LinkedIn",
+    handle: "ariyibi-tomiwa",
+    href: "https://www.linkedin.com/in/ariyibi-tomiwa/",
+  },
+  {
+    label: "Contra",
+    handle: "ariyibi_tomiwa",
+    href: "https://contra.com/ariyibi_tomiwa/work",
+  },
+  { label: "X", handle: "@tommy_is_bae", href: "https://x.com/tommy_is_bae" },
+];
 
 const PROJECTS = [
   {
@@ -11,7 +27,7 @@ const PROJECTS = [
     description:
       "Brand system and website for a firm that builds and backs service businesses.",
     tags: ["Brand System", "Web Design", "Figma"],
-    coverUrl: "/riverlight-cover.webp",
+    coverUrl: "/projects/riverlight.jpg",
     liveUrl: "https://www.riverlight.co/",
   },
   {
@@ -21,7 +37,7 @@ const PROJECTS = [
     description:
       "Website design and design system for a Databricks-native AI consultancy.",
     tags: ["UI Design", "Design System", "Figma"],
-    coverUrl: "/climb-cover.png",
+    coverUrl: "/projects/climb.jpg",
     liveUrl: "https://climb.ai/",
   },
   {
@@ -30,7 +46,7 @@ const PROJECTS = [
     caseStudy: "intryc",
     description: "Web design and Webflow build for an AI support-QA platform.",
     tags: ["Webflow", "Web Design", "Interactions"],
-    coverUrl: "/intryc-cover.png",
+    coverUrl: "/projects/intryc.jpg",
     liveUrl: "https://www.intryc.com/",
   },
   {
@@ -39,7 +55,7 @@ const PROJECTS = [
     description:
       "Web design and Webflow build for a multifamily real-estate firm.",
     tags: ["Webflow", "Web Design", "Interactions"],
-    coverUrl: "/tandem-cover.png",
+    coverUrl: "/projects/tandem.jpg",
     liveUrl: "https://www.thetandemco.com/",
   },
   {
@@ -49,41 +65,35 @@ const PROJECTS = [
     description:
       "Web design, motion and Webflow build for a motorsport hospitality brand.",
     tags: ["Webflow", "Web Design", "Motion"],
-    coverUrl: "/trackside-cover.webp",
+    coverUrl: "/projects/trackside.jpg",
     liveUrl: "https://trackside.vip/",
   },
   {
     id: 5,
-    title: "Voiceflow",
-    description: "Web design and Webflow build for an AI agent platform.",
-    tags: ["Webflow", "UI Design", "Interactions"],
-    coverUrl: "/voiceflowcover.jpeg",
-    liveUrl: "https://www.voiceflow.com/",
-  },
-  {
-    id: 6,
     title: "Mono AI",
     description:
       "Concept site for an AI productivity platform, built in Webflow.",
     tags: ["Webflow", "Concept", "Interactions"],
-    coverUrl: "/mono-ai-cover.png",
+    coverUrl: "/projects/mono-ai.jpg",
     liveUrl: "https://mono-ai-e3cdb7.webflow.io/",
   },
   {
-    id: 7,
+    id: 6,
     title: "Cameron Gawley",
+    caseStudy: "cameron-gawley",
     description:
       "Personal site and CMS for an operator behind $500M+ in client revenue.",
     tags: ["Webflow", "UI/UX Design", "CMS"],
-    coverUrl: "/cameron-gawley-cover.png",
+    coverUrl: "/projects/cameron-gawley.jpg",
     liveUrl: "https://www.camerongawley.com/",
   },
   {
-    id: 8,
+    id: 7,
     title: "Haven Oaks",
+    caseStudy: "haven-oaks",
     description: "Web design and Webflow build for a London home-care agency.",
     tags: ["Webflow", "Web Design", "Accessibility"],
-    coverUrl: "/haven-oaks-cover.png",
+    coverUrl: "/projects/haven-oaks.jpg",
     liveUrl: "https://www.havenoakscareservices.com/",
   },
 ];
@@ -98,6 +108,16 @@ export default function App() {
 function Home() {
   const [activeTab, setActiveTab] = useState("Work");
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
@@ -349,98 +369,74 @@ function Home() {
               <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-6">
                 Contact
               </h3>
-              <div className="flex flex-col gap-4">
-                <a
-                  href="mailto:ariyibitomiwa611@gmail.com"
-                  className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all"
-                >
-                  <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+              <p className="text-[16px] text-[#4A4A4A] leading-relaxed mb-8 max-w-[46ch]">
+                Have a project in mind? Book a quick intro call, or send a
+                short note about what you're building and when you need it
+                live.
+              </p>
+
+              <ul className="border-t border-gray-100 mb-12">
+                <li className="border-b border-gray-100">
+                  <a
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-between gap-4 py-4 group"
+                  >
+                    <span className="text-[15px] font-medium">Book a call</span>
+                    <span className="flex items-center gap-2 text-[14px] text-gray-500 group-hover:text-black transition-colors">
+                      15 min on Cal.com
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </span>
+                  </a>
+                </li>
+                <li className="border-b border-gray-100 flex items-center justify-between gap-4 py-4">
+                  <span className="text-[15px] font-medium">Email</span>
+                  <span className="flex items-center gap-3 text-[14px] text-gray-500 min-w-0">
+                    <a
+                      href={`mailto:${EMAIL}`}
+                      className="hover:text-black transition-colors truncate"
                     >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
-                  </span>
-                  ariyibitomiwa611@gmail.com
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/ariyibi-tomiwa/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all"
-                >
-                  <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      {EMAIL}
+                    </a>
+                    <button
+                      type="button"
+                      onClick={copyEmail}
+                      aria-label={copied ? "Email copied" : "Copy email"}
+                      title={copied ? "Copied" : "Copy email"}
+                      className="shrink-0 hover:text-black transition-colors"
                     >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
+                      {copied ? (
+                        <Check className="w-4 h-4" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
                   </span>
-                  linkedin.com/in/ariyibi-tomiwa
-                </a>
-                <a
-                  href="https://contra.com/ariyibi_tomiwa/work"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all"
-                >
-                  <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                </li>
+              </ul>
+
+              <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">
+                Elsewhere
+              </h3>
+              <ul className="border-t border-gray-100">
+                {SOCIALS.map((s) => (
+                  <li key={s.label} className="border-b border-gray-100">
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between py-4 group"
                     >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
-                  </span>
-                  contra.com/ariyibi_tomiwa
-                </a>
-                <a
-                  href="https://x.com/tommy_is_bae"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 text-[#0066CC] hover:text-black transition-colors text-[15px] sm:text-[18px] w-fit break-all"
-                >
-                  <span className="w-6 h-6 border-[1.5px] border-current rounded-[6px] flex items-center justify-center shrink-0">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                    </svg>
-                  </span>
-                  x.com/tommy_is_bae
-                </a>
-              </div>
+                      <span className="text-[15px] font-medium">{s.label}</span>
+                      <span className="flex items-center gap-2 text-[14px] text-gray-500 group-hover:text-black transition-colors">
+                        {s.handle}
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 
@@ -452,9 +448,9 @@ function Home() {
                 className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors"
               >
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
-                  Get In Touch
+                  Get in touch
                 </span>
-                <h3 className="text-2xl font-semibold">Contact Me</h3>
+                <h3 className="text-2xl font-semibold">Book a call or email</h3>
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
@@ -496,12 +492,22 @@ function Home() {
         {/* Footer */}
         <footer className="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 relative z-10">
           <p>Ariyibi Tomiwa &copy; 2026</p>
-          <a
-            href="mailto:ariyibitomiwa611@gmail.com"
-            className="hover:text-black mt-2 sm:mt-0 transition-colors"
-          >
-            ariyibitomiwa611@gmail.com
-          </a>
+          <div className="flex items-center gap-5 mt-2 sm:mt-0">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-black transition-colors"
+            >
+              Book a call
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="hover:text-black transition-colors"
+            >
+              {EMAIL}
+            </a>
+          </div>
         </footer>
       </main>
 
