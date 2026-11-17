@@ -12,3 +12,10 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
+
+@layer base {
+  button:not(:disabled),
+  [role="button"] {
+    cursor: pointer;
+  }
+}

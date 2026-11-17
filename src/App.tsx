@@ -1,9 +1,30 @@
 import { ArrowUpRight, Check, Copy, X } from "lucide-react";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import CaseStudyPage from "./CaseStudyPage";
 import { getCaseStudy } from "./caseStudies";
 
-const EMAIL = "ariyibitomiwa611@gmail.com";
+const EMAIL = "tomiwa@ariyibitomiwa.com";
+const TESTIMONIALS = [
+  {
+    quote: "Ariyibi is an absolute standout professional.",
+    name: "Sean Majumder, client",
+  },
+  {
+    quote:
+      "Clean, professional build, handled a complex CMS restructure well and took feedback on board.",
+    name: "Ed Perez, Max Performance",
+  },
+  {
+    quote:
+      "I handled the design part while he brought the website to life in Webflow.",
+    name: "Paulo C. Graça Moura, Quinta do Rapozinho",
+  },
+  {
+    quote:
+      "His attention to detail and deep understanding of Webflow made the entire process seamless.",
+    name: "Octavian, design collaborator",
+  },
+];
 const BOOKING_URL = "https://cal.com/ariyibi-tomiwa/15min";
 const SOCIALS = [
   {
@@ -119,10 +140,16 @@ function Home() {
     }
   };
 
-  const handleTabChange = (tab: string) => {
-    setActiveTab(tab);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const firstRender = useRef(true);
+  useLayoutEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [activeTab]);
+
+  const handleTabChange = (tab: string) => setActiveTab(tab);
 
   return (
     <div className="min-h-screen bg-white relative">
@@ -156,8 +183,11 @@ function Home() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Webflow Designer & Developer</span>
+            <span>Webflow Designer & Developer for SaaS and B2B</span>
           </div>
+          <p className="text-[13px] text-gray-400 mt-1">
+            Lagos, Nigeria · Overlaps US mornings
+          </p>
         </section>
 
         {/* Navigation Wrapper */}
@@ -181,8 +211,9 @@ function Home() {
 
         {/* Main Content Area */}
         <div className="space-y-16">
-          {activeTab === "Work" && (
-            <section className="space-y-16">
+          <section
+            hidden={activeTab !== "Work"}
+            className="space-y-16">
               {PROJECTS.map((project) => (
                 <a
                   href={
@@ -200,8 +231,11 @@ function Home() {
                     <img
                       src={project.coverUrl}
                       alt={project.title}
-                      loading="lazy"
-                      className="w-full h-auto block object-cover rounded-none sm:rounded-[24px] transition-transform duration-500 group-hover:scale-[1.02]"
+                      width={1600}
+                      height={1000}
+                      loading={project.id < 2 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="w-full h-auto aspect-[16/10] block object-cover rounded-none sm:rounded-[24px] transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </div>
                   <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
@@ -224,11 +258,27 @@ function Home() {
                   </p>
                 </a>
               ))}
-            </section>
-          )}
 
-          {activeTab === "About" && (
-            <section className="space-y-12 text-[16px] text-[#4A4A4A] leading-relaxed">
+              <div className="space-y-4 pt-4">
+                <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">
+                  Kind words
+                </h3>
+                <div className="space-y-6">
+                  {TESTIMONIALS.slice(0, 3).map((t) => (
+                    <div key={t.name}>
+                      <p className="text-[15px] text-gray-900">"{t.quote}"</p>
+                      <span className="text-[13px] text-gray-400">
+                        {t.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+          </section>
+
+          <section
+            hidden={activeTab !== "About"}
+            className="space-y-12 text-[16px] text-[#4A4A4A] leading-relaxed">
               <div className="space-y-4">
                 <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">
                   Summary
@@ -335,23 +385,7 @@ function Home() {
                   Kind words
                 </h3>
                 <div className="space-y-6">
-                  {[
-                    {
-                      quote:
-                        "Clean, professional build, handled a complex CMS restructure well and took feedback on board.",
-                      name: "Ed Perez, Max Performance",
-                    },
-                    {
-                      quote:
-                        "Professional, ethical Webflow designer that can deliver. Fast and pragmatic.",
-                      name: "Paulo C. Graça Moura, Quinta do Rapozinho",
-                    },
-                    {
-                      quote:
-                        "His attention to detail and deep understanding of Webflow made the entire process seamless.",
-                      name: "Octavian, design collaborator",
-                    },
-                  ].map((t) => (
+                  {TESTIMONIALS.map((t) => (
                     <div key={t.name}>
                       <p className="text-[15px] text-gray-900">"{t.quote}"</p>
                       <span className="text-[13px] text-gray-400">
@@ -361,11 +395,11 @@ function Home() {
                   ))}
                 </div>
               </div>
-            </section>
-          )}
+          </section>
 
-          {activeTab === "Contact" && (
-            <section className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+          <section
+            hidden={activeTab !== "Contact"}
+            className="animate-in fade-in slide-in-from-bottom-2 duration-500">
               <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-6">
                 Contact
               </h3>
@@ -437,15 +471,15 @@ function Home() {
                   </li>
                 ))}
               </ul>
-            </section>
-          )}
+          </section>
 
           {/* Dynamic CTA Section */}
           <section className="grid sm:grid-cols-2 gap-6 pt-16">
             {(activeTab === "Work" || activeTab === "About") && (
-              <div
+              <button
+                type="button"
                 onClick={() => handleTabChange("Contact")}
-                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors"
+                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors text-left w-full"
               >
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   Get in touch
@@ -454,13 +488,14 @@ function Home() {
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
-              </div>
+              </button>
             )}
 
             {(activeTab === "Work" || activeTab === "Contact") && (
-              <div
+              <button
+                type="button"
                 onClick={() => handleTabChange("About")}
-                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors"
+                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors text-left w-full"
               >
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   My Story
@@ -469,13 +504,14 @@ function Home() {
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
-              </div>
+              </button>
             )}
 
             {(activeTab === "About" || activeTab === "Contact") && (
-              <div
+              <button
+                type="button"
                 onClick={() => handleTabChange("Work")}
-                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors"
+                className="bg-[#F2F2F1] rounded-[16px] sm:rounded-[24px] p-6 sm:p-8 relative min-h-[200px] flex flex-col group cursor-pointer hover:bg-[#E5E5E4] transition-colors text-left w-full"
               >
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   Portfolio
@@ -484,7 +520,7 @@ function Home() {
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
-              </div>
+              </button>
             )}
           </section>
         </div>
