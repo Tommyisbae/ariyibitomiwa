@@ -16,7 +16,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "I handled the design part while he brought the website to life in Webflow.",
+      "Professional, ethical Webflow designer that can deliver. Fast and pragmatic.",
     name: "Paulo C. Graça Moura, Quinta do Rapozinho",
   },
   {
@@ -183,11 +183,8 @@ function Home() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Webflow Designer & Developer for SaaS and B2B</span>
+            <span>Webflow Designer & Developer</span>
           </div>
-          <p className="text-[13px] text-gray-400 mt-1">
-            Lagos, Nigeria · Overlaps US mornings
-          </p>
         </section>
 
         {/* Navigation Wrapper */}
@@ -258,22 +255,6 @@ function Home() {
                   </p>
                 </a>
               ))}
-
-              <div className="space-y-4 pt-4">
-                <h3 className="text-[12px] font-medium text-[#A0A0A0] uppercase tracking-wider mb-2">
-                  Kind words
-                </h3>
-                <div className="space-y-6">
-                  {TESTIMONIALS.slice(0, 3).map((t) => (
-                    <div key={t.name}>
-                      <p className="text-[15px] text-gray-900">"{t.quote}"</p>
-                      <span className="text-[13px] text-gray-400">
-                        {t.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
           </section>
 
           <section
