@@ -265,11 +265,15 @@ function Home() {
                   Summary
                 </h3>
                 <p>
-                  I make websites that feel expensive. Clean, quiet and
-                  impossible to ignore. I partner with SaaS and B2B companies
-                  whose product has outpaced their brand, and close the gap,
-                  from identity to a Webflow or Framer build their team can
-                  actually run.
+                  My name is Ariyibi Tomiwa, and I'm a Webflow designer and
+                  developer. For the past 7 years I've been building websites
+                  for SaaS and B2B companies, including AssetIntel, Climb AI
+                  and Riverlight. My favorite part of the job is turning a
+                  Figma file into a real site people can use.
+                </p>
+                <p>
+                  When I'm not working, you can usually find me reading a
+                  book, playing football, or at the gym.
                 </p>
                 <div className="pt-2 flex items-center gap-4">
                   <a
@@ -342,7 +346,7 @@ function Home() {
                     {
                       role: "Webflow Intern",
                       org: "Tradespace",
-                      dates: "2023",
+                      dates: "2019",
                     },
                   ].map((job) => (
                     <div
