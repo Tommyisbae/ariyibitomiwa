@@ -60,6 +60,14 @@ const PROJECTS = [
     liveUrl: "https://climb.ai/",
   },
   {
+    id: 8,
+    title: "Unmind",
+    caseStudy: "unmind",
+    description: "A 50+ page Webflow build and CMS for a workplace wellbeing platform.",
+    coverUrl: "/projects/unmind.avif",
+    liveUrl: "https://unmind.com/",
+  },
+  {
     id: 2,
     title: "Intryc AI",
     caseStudy: "intryc",

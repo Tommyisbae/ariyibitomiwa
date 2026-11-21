@@ -53,7 +53,7 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
                   {section.bullets && <ul className="list-disc space-y-3 pl-5">{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
                 </div>
               </section>
-              {sectionIndex === 1 && (
+              {sectionIndex === study.sections.length - 1 && (
                 <figure className="mt-12 md:mt-16">
                   <a href={study.currentCapture} target="_blank" rel="noreferrer" aria-label={`Open full-size ${study.title} website screenshot`} className="block overflow-hidden rounded-2xl border border-gray-200">
                     <img src={study.currentCapture} alt={`${study.title} live website captured in November 2026`} loading="lazy" width={1265} height={712} className="block h-auto w-full" />
@@ -70,7 +70,7 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
               <figure key={item.src}>
                 <div className="overflow-hidden rounded-2xl bg-gray-100 md:rounded-3xl">
                   {item.src.endsWith(".mp4") ? (
-                    <video src={item.src} controls playsInline preload="none" className="block h-auto w-full" aria-label={`${study.title} project walkthrough`} />
+                    <video src={item.src} autoPlay muted loop controls playsInline preload="metadata" className="block h-auto w-full" aria-label={`${study.title} project walkthrough`} />
                   ) : (
                     <a href={item.src} target="_blank" rel="noreferrer" aria-label={`Open ${study.title} design detail ${imageIndex + 1}`}>
                       <img src={item.src} alt={item.caption} loading="lazy" className="block h-auto w-full" />
