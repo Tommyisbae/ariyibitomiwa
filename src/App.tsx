@@ -175,7 +175,7 @@ function Home() {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
+          <h1 className="text-3xl font-medium mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
             <span>Web Designer & Webflow Developer</span>
           </div>
@@ -223,7 +223,7 @@ function Home() {
                     />
                   </div>
                   <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
-                    <h2 className="text-[20px] font-semibold tracking-tight text-gray-900">
+                    <h2 className="text-[20px] font-medium tracking-tight text-gray-900">
                       {project.title}
                     </h2>
 
@@ -448,7 +448,7 @@ function Home() {
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   Get in touch
                 </span>
-                <h3 className="text-2xl font-semibold">Book a call or email</h3>
+                <h3 className="text-2xl font-medium">Book a call or email</h3>
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
@@ -464,7 +464,7 @@ function Home() {
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   My Story
                 </span>
-                <h3 className="text-2xl font-semibold">Read about me</h3>
+                <h3 className="text-2xl font-medium">Read about me</h3>
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
@@ -480,7 +480,7 @@ function Home() {
                 <span className="text-[14px] text-gray-500 mb-2 font-normal">
                   Portfolio
                 </span>
-                <h3 className="text-2xl font-semibold">View my work</h3>
+                <h3 className="text-2xl font-medium">View my work</h3>
                 <div className="absolute bottom-6 right-6">
                   <ArrowUpRight className="w-8 h-8 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>

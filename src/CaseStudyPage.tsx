@@ -86,13 +86,13 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
         <section aria-label="Continue exploring" className="mt-20 grid gap-6 sm:grid-cols-2">
           <a href="mailto:tomiwa@ariyibitomiwa.com" className="group relative flex min-h-[200px] flex-col rounded-[16px] bg-[#F2F2F1] p-6 pb-16 transition-colors hover:bg-[#E5E5E4] sm:rounded-[24px] sm:p-8 sm:pb-16">
             <span className="mb-2 text-[14px] font-normal text-gray-500">Get in touch</span>
-            <h2 className="text-2xl font-semibold">Let’s work together</h2>
+            <h2 className="text-2xl font-medium">Let’s work together</h2>
             <ArrowUpRight className="absolute bottom-6 right-6 size-8 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
           </a>
           {next && (
             <a href={`/work/${next.slug}`} className="group relative flex min-h-[200px] flex-col rounded-[16px] bg-[#F2F2F1] p-6 pb-16 transition-colors hover:bg-[#E5E5E4] sm:rounded-[24px] sm:p-8 sm:pb-16">
               <span className="mb-2 text-[14px] font-normal text-gray-500">Next case study</span>
-              <h2 className="text-2xl font-semibold">{next.title}</h2>
+              <h2 className="text-2xl font-medium">{next.title}</h2>
               <ArrowUpRight className="absolute bottom-6 right-6 size-8 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
             </a>
           )}
