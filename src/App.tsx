@@ -331,6 +331,11 @@ function Home() {
                       dates: "2023 – 2025",
                     },
                     {
+                      role: "Webflow Developer",
+                      org: "Unmind",
+                      dates: "Before 2023",
+                    },
+                    {
                       role: "Webflow Intern",
                       org: "Tradespace",
                       dates: "2019",
