@@ -47,7 +47,6 @@ const PROJECTS = [
     caseStudy: "riverlight",
     description:
       "Brand system and website for a firm that builds and backs service businesses.",
-    tags: ["Brand System", "Web Design", "Figma"],
     coverUrl: "/projects/riverlight.jpg",
     liveUrl: "https://www.riverlight.co/",
   },
@@ -57,7 +56,6 @@ const PROJECTS = [
     caseStudy: "climb",
     description:
       "Website design and design system for a Databricks-native AI consultancy.",
-    tags: ["UI Design", "Design System", "Figma"],
     coverUrl: "/projects/climb.jpg",
     liveUrl: "https://climb.ai/",
   },
@@ -66,16 +64,15 @@ const PROJECTS = [
     title: "Intryc AI",
     caseStudy: "intryc",
     description: "Web design and Webflow build for an AI support-QA platform.",
-    tags: ["Webflow", "Web Design", "Interactions"],
     coverUrl: "/projects/intryc.jpg",
     liveUrl: "https://www.intryc.com/",
   },
   {
     id: 3,
     title: "Tandem",
+    caseStudy: "tandem",
     description:
       "Web design and Webflow build for a multifamily real-estate firm.",
-    tags: ["Webflow", "Web Design", "Interactions"],
     coverUrl: "/projects/tandem.jpg",
     liveUrl: "https://www.thetandemco.com/",
   },
@@ -85,16 +82,15 @@ const PROJECTS = [
     caseStudy: "trackside",
     description:
       "Web design, motion and Webflow build for a motorsport hospitality brand.",
-    tags: ["Webflow", "Web Design", "Motion"],
     coverUrl: "/projects/trackside.jpg",
     liveUrl: "https://trackside.vip/",
   },
   {
     id: 5,
     title: "Mono AI",
+    caseStudy: "mono-ai",
     description:
       "Concept site for an AI productivity platform, built in Webflow.",
-    tags: ["Webflow", "Concept", "Interactions"],
     coverUrl: "/projects/mono-ai.jpg",
     liveUrl: "https://mono-ai-e3cdb7.webflow.io/",
   },
@@ -104,7 +100,6 @@ const PROJECTS = [
     caseStudy: "cameron-gawley",
     description:
       "Personal site and CMS for an operator behind $500M+ in client revenue.",
-    tags: ["Webflow", "UI/UX Design", "CMS"],
     coverUrl: "/projects/cameron-gawley.jpg",
     liveUrl: "https://www.camerongawley.com/",
   },
@@ -113,7 +108,6 @@ const PROJECTS = [
     title: "Haven Oaks",
     caseStudy: "haven-oaks",
     description: "Web design and Webflow build for a London home-care agency.",
-    tags: ["Webflow", "Web Design", "Accessibility"],
     coverUrl: "/projects/haven-oaks.jpg",
     liveUrl: "https://www.havenoakscareservices.com/",
   },
@@ -183,7 +177,7 @@ function Home() {
           </div>
           <h1 className="text-3xl font-semibold mb-2">Ariyibi Tomiwa</h1>
           <div className="flex items-center text-gray-600">
-            <span>Webflow Designer & Developer</span>
+            <span>Web Designer & Webflow Developer</span>
           </div>
         </section>
 
@@ -213,14 +207,7 @@ function Home() {
             className="space-y-16">
               {PROJECTS.map((project) => (
                 <a
-                  href={
-                    "caseStudy" in project
-                      ? `/work/${project.caseStudy}`
-                      : project.liveUrl
-                  }
-                  {...("caseStudy" in project
-                    ? {}
-                    : { target: "_blank", rel: "noreferrer" })}
+                  href={`/work/${project.caseStudy}`}
                   key={project.id}
                   className="group cursor-pointer block"
                 >
@@ -236,23 +223,15 @@ function Home() {
                     />
                   </div>
                   <div className="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
-                    <h2 className="text-[15px] font-semibold text-gray-900">
+                    <h2 className="text-[20px] font-semibold tracking-tight text-gray-900">
                       {project.title}
                     </h2>
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[11px] text-gray-600 bg-[#F2F2F1] px-2 py-0.5 rounded-[4px] font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+
                   </div>
                   <p className="text-[14px] text-gray-600">
                     {project.description}
                   </p>
+                  <span className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2 text-[13px] font-medium group-hover:bg-gray-100">Read case study <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
               ))}
           </section>
@@ -265,11 +244,11 @@ function Home() {
                   Summary
                 </h3>
                 <p>
-                  My name is Ariyibi Tomiwa, and I'm a Webflow designer and
-                  developer. For the past 7 years I've been building websites
-                  for SaaS and B2B companies, including AssetIntel, Climb AI
-                  and Riverlight. My favorite part of the job is turning a
-                  Figma file into a real site people can use.
+                  I’m a web designer and Webflow developer with seven years
+                  of experience across SaaS and B2B websites, including
+                  AssetIntel, Climb AI and Riverlight. I connect design with
+                  implementation, from responsive page systems and CMS architecture
+                  to launch planning and team handoff.
                 </p>
                 <p>
                   When I'm not working, you can usually find me reading a
